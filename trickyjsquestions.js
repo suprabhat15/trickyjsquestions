@@ -1,11 +1,11 @@
-let a=true;
-setTimeout(() => {
-    a=false;
-}, 2000);
+// let a=true;
+// setTimeout(() => {
+//     a=false;
+// }, 2000);
 
-while(a){
-    console.log(a);  // this code will run on Call Stack of JS Engine. This loop will run infinite times as event loop won't get clear Call Stack at any time.
-}
+// while(a){
+//     console.log(a);  // this code will run on Call Stack of JS Engine. This loop will run infinite times as event loop won't get clear Call Stack at any time.
+// }
 
 /////////////
 
@@ -64,3 +64,34 @@ while(a){
 
 ////////////
 
+// function hoist(value){
+//     if(value === 'hi'){
+//         var action = "hello";  // var is hoisted.
+//     }
+//     else {
+//         action = "night";
+//     }
+
+//     return action;
+// }
+// var response = hoist('hi');
+// console.log(response);   // will give correct output as "hello" bcoz var is hoisted.
+
+function hoist1(value){
+    if(value === 'hi'){
+        const action = "hello";  // cosnt is not hoisted.
+    }
+    else {
+        action = "night";  // by default it is 'var' in nature. it changed to 'const', then will throw error as const is not hoisted.
+    }
+
+    return action;
+}
+var response = hoist1('hi');
+console.log(response);  // will give ERROR as const OR let are not hoisted.
+
+// var is hoisted
+// const, let are not hoisted
+// const, let are scoped within the blocks they are in
+
+///////////
