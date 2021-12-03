@@ -79,7 +79,7 @@
 
 function hoist1(value){
     if(value === 'hi'){
-        const action = "hello";  // cosnt is not hoisted.
+        var action = "hello";  // cosnt is not hoisted.
     }
     else {
         action = "night";  // by default it is 'var' in nature. it changed to 'const', then will throw error as const is not hoisted.
