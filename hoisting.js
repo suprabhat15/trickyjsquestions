@@ -17,5 +17,5 @@ var fun = getName = () => {
 // console.log(x); // 7
 // console.log(fun);  // print entire function body
 console.log(fun()) // Namaste JS as output then undefined because of console.log;
-fun(); // Namaste JS as output
+fun(); // Namaste JS as outputs
 // console.log(getName); // print entire function body
