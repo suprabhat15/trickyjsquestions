@@ -77,21 +77,33 @@
 // var response = hoist('hi');
 // console.log(response);   // will give correct output as "hello" bcoz var is hoisted.
 
-function hoist1(value){
-    if(value === 'hi'){
-        var action = "hello";  // cosnt is not hoisted.
-    }
-    else {
-        action = "night";  // by default it is 'var' in nature. it changed to 'const', then will throw error as const is not hoisted.
-    }
+// function hoist1(value){
+//     if(value === 'hi'){
+//         const action = "hello";  // const is not hoisted.
+//     }
+//     else {
+//         action = "night";  // by default it is 'var' in nature. it changed to 'const', then will throw error as const is not hoisted.
+//     }
 
-    return action;
-}
-var response = hoist1('hi');
-console.log(response);  // will give ERROR as const OR let are not hoisted.
+//     return action;
+// }
+// var response = hoist1('hi');
+// console.log(response);  // will give ERROR as const OR let are not hoisted.
 
 // var is hoisted
 // const, let are not hoisted
 // const, let are scoped within the blocks they are in
 
 ///////////
+
+for(let i=0;i<5;i++){   // will print 0 to 4 bcoz let is block scoped.
+    setTimeout(() => {
+        console.log(i);
+    }, 1000);
+}
+
+for(var i=0;i<5;i++){   // will print 5 5 times bcoz var is hoisted.
+    setTimeout(() => {
+        console.log(i);
+    }, 1000);
+}
