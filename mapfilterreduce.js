@@ -25,8 +25,9 @@ console.log(output);
 
 // above result can be obtained using reduce.
 const result = users.reduce((acc, current) => {
-    if(current.age <40) acc.push(current.firstName);
+    // if(current.age <40) acc.push(current.firstName);
+    if(current.age <40) acc += (current.age);
     return acc;
-}, []);
+}, 0);  // replace 0 with [] for execution of 28th line.
 
 console.log(result);
